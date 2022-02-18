@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style> 
+    /* FORMATAÇÃO CORRETA: 
+    
+        COLSPAn"2" - Serve para mesclar duas células na posição horizontal; 
+        ROWSPAN"3' - Serve para mesclar treês células na posição vertical; 
+
+        SCOPE="COL" - Escopo de coluna, faz referência a uma única coluna;
+        SCOPE="ROW" - Escopo de linha, faz referência a uma única linha;
+        SCOPE="COLGROUP" - Escopo de coluna, faz referência a várias colunas;
+        SCOPE="ROWGROUP" - Escopo de linha, faz referência a várias linhas; 
+        OBS.: O escope só é utilizado nos THs.  
+
+        tbody tr:nth-child(2n) - Deixa os TDs zebrados; 
+        tbody tr:nth-child(even) - Deixa os TDs zebrados (só os pares);
+        tbody tr:nth-child(odd) - Deixa os TDs zebrados (só os ímpares); 
+
+        border-collapse: collapse; Utilizado para tirar o distanciamento entre as células; 
+
+        TEXT-ALIGN - Para posicionamento horizontal do texto;
+        VERTICAL - ALIGN - Para posicionamento vertical do texto; 
+
+        POSITION STICKY - Serve para deixar o cabeçalho fixo; 
+        TOP: 0px - Posição a qual o cabeçalho irá ficar fixo; 
+        BACKGROUND-COLOR - Cor pela qual o cabeçalho irá ficar; 
+
+        OVERFLOW-X: AUTO - Serve para fixar os textos que estiverem fora da div, caso aconteça da tabela ficar muito larga e necessite rolar horizontalmente; 
+        OBS1: Para funcionar, toda yabela deve estar dentro da DIV e terá que adicionar um seletor de identificação CONTAINER - (<div id="container"/>);
+        OBS2: Com o (Overflow) ativado, o mesmo desativa a (Positio:Sticky).
+    
+        */
+        div tbody tr:nth-child(2n){
+            background-color: rgb(46, 201, 154);  
+        }
+
+        th, td{
+            border: 1px solid black;
+            width: 150px;
+            padding: 10px;
+        } 
+        th{
+            color: white;
+            background-color: rgb(2, 59, 37);
+        } 
+       tr{
+           text-align: center; 
+           vertical-align: bottom;
+       }
+        table{
+            
+            border-collapse: collapse; 
+            margin: auto;
+        } 
+        caption{ 
+            font-size: 1.6em; 
+            color: brown; 
+            padding: 2px;
+        } 
+        thead th{           
+            position: sticky; 
+            top: 0;
+            background-color: rgb(2, 59, 37);
+        } 
+        #container{
+            overflow-x: auto;
+        }
+        
+    </style>
+</head>
+<body> 
+    <h1>Inserindo tabelas de maneira correta</h1> 
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut pariatur corporis eaque ullam temporibus error dolor possimus accusamus tempora! Harum hic nemo voluptates fugiat et sequi vero a! Dolor, ipsam!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quibusdam dolor ipsum minus aperiam, fuga distinctio! Qui magnam neque, sit culpa sequi eos quae voluptatem recusandae ipsam, quasi perspiciatis nihil.</p>
+
+    <div id="container">
+        <table>
+            <caption>Quantidade de Pessoas por Estado - Brasil 2021</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Estados</th>
+                    <th scope="col">Posição</th>
+                    <th scope="col">Unidade Federativa</th>
+                    <th scope="col">População 2021</th>
+                    <th scope="col">Estados</th>
+                    <th scope="col">Posição</th>
+                    <th scope="col">Unidade Federativa</th>
+                    <th scope="col">População 2021</th>
+                    <th scope="col">Estados</th>
+                    <th scope="col">Posição</th>
+                    <th scope="col">Unidade Federativa</th>
+                    <th scope="col">População 2021</th>
+                    <th scope="col">Estados</th>
+                    <th scope="col">Posição</th>
+                    <th scope="col">Unidade Federativa</th>
+                    <th scope="col">População 2021</th>
+                    <th scope="col">Estados</th>
+                    <th scope="col">Posição</th>
+                    <th scope="col">Unidade Federativa</th>
+                    <th scope="col">População 2021</th>
+                    <th scope="col">Estados</th>
+                    <th scope="col">Posição</th>
+                    <th scope="col">Unidade Federativa</th>
+                    <th scope="col">População 2021</th>
+                </tr>
+            </thead>
+            <tbody>
+        
+                <tr>
+                    <th scope="rowgroup" rowspan="5">Norte</th>
+                    <td>01</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <td>05</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <th scope="rowgroup" rowspan="5">Nordeste</th>
+                    <td>06</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <td>07</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <td>08</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <td>09</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <th scope="rowgroup" rowspan="5">Centro-Oeste</th>
+                    <td>11</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <th scope="rowgroup" rowspan="5">Sul</th>
+                    <td>16</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <th scope="rowgroup" rowspan="7">Suldeste</th>
+                    <td>21</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>São Paulo</td>
+                    <td>41.262.199</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="3">Total da População</th>
+                    <th scope="col">213 bilhões</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    
+</body>
+</html>
